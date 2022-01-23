@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+    <h3>{{ message }}</h3> 
+    <input v-model="message">
+    <button v-on:click="reverse">Reverse</button>
+        <div v-for="todo in todos">
+            {{todo.text}}
+        </div>
+        <template v-for="todo in groceryList">
+            <todo-item v-bind:todo="todo"></todo-item>
+        </template>  
+    </div>
+    
+    
+    <script src="./index.js"> </script>
+</body>
+</html>
